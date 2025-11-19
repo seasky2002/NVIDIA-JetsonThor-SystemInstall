@@ -57,7 +57,58 @@ IV. Jetpack&CUDA安裝:
      ```
      此時就可以去驗證cuda有沒有安裝成功了
      <img width="671" height="153" alt="螢幕擷取畫面 2025-11-19 141310" src="https://github.com/user-attachments/assets/5c990015-4ebe-42ec-8fcb-7bd6cfba11ee" />
-    
+
+V. jetson-stats安裝:
+  1. jetson-stats這個包可以監控硬體的使用狀況，以及各個系統的連接狀況。執行以下指令安裝:
+     ```bash
+     sudo apt update
+     sudo apt install python3
+     sudo apt install python3-pip
+     sudo pip3 install -U pip
+     sudo pip3 install jetson-stats
+     ```
+     
+     中間可能會有以下報錯:
+     error: externally-managed-environment
+     x This environment is externally managed
+     ╰─> To install Python packages system-wide, try apt install
+     python3-xyz, where xyz is the package you are trying to
+     install.
+     If you wish to install a non-Debian-packaged Python package,
+     create a virtual environment using python3 -m venv path/to/venv.
+     Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+     sure you have python3-full installed.
+     If you wish to install a non-Debian packaged Python application,
+     it may be easiest to use pipx install xyz, which will manage a
+     virtual environment for you. Make sure you have pipx installed.
+     See /usr/share/doc/python3.12/README.venv for more information.
+
+     此時執行以下指令即可解決:
+     ```bash
+     sudo mv /usr/lib/python3.12/EXTERNALLY-MANAGED /usr/lib/python3.12/EXTERNALLY-MANAGED-back
+     sudo pip3 install -U pip
+     sudo pip3 install jetson-stats
+     ```
+  2. 安裝完成後，啟用並重啟:
+     ```bash
+     sudo systemctl restart jtop.service
+     sudo reboot now
+     ```
+     重啟後即可檢查有沒有輸出
+     ```bash
+     jtop
+     ```
+     <img width="2139" height="1157" alt="image" src="https://github.com/user-attachments/assets/154bf7ac-25ca-42a2-9865-41cf084e1ceb" />
+     ```bash
+     jetson_release
+     ```
+     <img width="780" height="557" alt="image" src="https://github.com/user-attachments/assets/b657e9a0-49de-4fea-9687-62f35db7b09e" />
+     ```bash
+     nvidia-smi
+     ```
+     <img width="1097" height="530" alt="image" src="https://github.com/user-attachments/assets/6404bbd8-3ad9-44c6-9a93-55e0c784f579" />
+
+VI. openCV with CUDA安裝
 
 
 參考來源:
