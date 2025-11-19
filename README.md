@@ -100,10 +100,12 @@ V. jetson-stats安裝:
      jtop
      ```
      <img width="2139" height="1157" alt="image" src="https://github.com/user-attachments/assets/154bf7ac-25ca-42a2-9865-41cf084e1ceb" />
+     
      ```bash
      jetson_release
      ```
      <img width="780" height="557" alt="image" src="https://github.com/user-attachments/assets/b657e9a0-49de-4fea-9687-62f35db7b09e" />
+     
      ```bash
      nvidia-smi
      ```
