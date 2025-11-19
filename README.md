@@ -1,19 +1,19 @@
 # NVIDIA-Thor-System-Install
 Nvidia AGX Thor安裝log
 
-I. 硬體準備:
-  1. NVIDIA AGX Thor本體
-  2. 官方提供的變壓器(type-C頭)
-  3. HDMI傳輸線(以方便在螢幕上操作)
-  4. 鍵盤
-  5. 空間大於16GB的隨身碟(系統碟)
-  6. 一臺電腦(用來灌系統碟)
+## I. 硬體準備:
+  1. **NVIDIA AGX Thor本體**
+  2. **官方提供的變壓器(type-C頭)**
+  3. **HDMI傳輸線(以方便在螢幕上操作)**
+  4. **鍵盤**
+  5. **空間大於16GB的隨身碟(系統碟)**
+  6. **一臺電腦(用來灌系統碟)**
 
-II. 軟體準備:
-  1. Jetson 官方鏡像檔:https://developer.nvidia.com/embedded/jetpack/downloads
-  2. Etcher系統燒錄套件:https://etcher.balena.io/#download-etcher
+## II. 軟體準備:
+  1. Jetson 官方鏡像檔:[JetPack Downloads](https://developer.nvidia.com/embedded/jetpack/downloads)
+  2. Etcher系統燒錄套件:[Etcher](https://etcher.balena.io/#download-etcher)
 
-III. 安裝流程:
+## III. 安裝流程:
   1. 先在隨身碟上用Etcher燒錄官方鏡像檔，燒錄好之後插到Jetson的USB端口，並接上HDMI線、鍵盤，供電可以直接插Jetson的兩個type-C插口其中一個
   2. 開啟電源後，理論上會進入GNU GRUB的畫面，此時點選第一個"Jetson Thor options"
      <img width="1338" height="832" alt="Jetson 1" src="https://github.com/user-attachments/assets/5bb261a0-71f8-44a8-914b-5f14f15d73d8" />(圖片來源:CSDN)
@@ -27,7 +27,7 @@ III. 安裝流程:
   4. 點選之後，等待15分鐘直至安裝成功，此時它會自動重啟，等待Update Progress跑完即可。
   5. 安裝成功後，即可開始設定使用者名稱、時區、密碼等等，此時已經可以把USB拔下來了。
 
-IV. Jetpack&CUDA安裝:
+## IV. Jetpack&CUDA安裝:
   1. 打開終端機，直接使用以下指令:
      ```bash
      sudo apt update
@@ -58,7 +58,7 @@ IV. Jetpack&CUDA安裝:
      此時就可以去驗證cuda有沒有安裝成功了
      <img width="671" height="153" alt="螢幕擷取畫面 2025-11-19 141310" src="https://github.com/user-attachments/assets/5c990015-4ebe-42ec-8fcb-7bd6cfba11ee" />
 
-V. jetson-stats安裝:
+## V. jetson-stats安裝:
   1. jetson-stats這個包可以監控硬體的使用狀況，以及各個系統的連接狀況。執行以下指令安裝:
      ```bash
      sudo apt update
@@ -113,8 +113,12 @@ V. jetson-stats安裝:
      ```
      <img width="1097" height="530" alt="image" src="https://github.com/user-attachments/assets/6404bbd8-3ad9-44c6-9a93-55e0c784f579" />
 
-VI. openCV with CUDA安裝
+## VI. openCV with CUDA安裝:
+  待補充
 
+## VII. 已知問題:
+  1. 在nvidia-smi會顯示GPU memory Not Support，這是它讀不到的問題，實際在運行時，GPU還是會分配記憶體
+  2. jetson_release會顯示抓不到jetpack，但實際是有的
 
 參考來源:
 NVIDIA Jetpack:https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo
