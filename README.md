@@ -123,7 +123,7 @@ Nvidia AGX Thor安裝log
   待補充
 
 ## VII. 已知問題:
-  1. 在nvidia-smi會顯示Memory Useaged: Not Supported，這是它讀不到的問題，實際在運行時，GPU還是會分配記憶體
+  1. 在nvidia-smi會顯示Memory Usage: Not Supported，這是它讀不到的問題，實際在運行時，GPU還是會分配記憶體(用torch測試的結果)
   2. jetson_release會顯示抓不到jetpack，但實際是有的
 
 參考來源:
