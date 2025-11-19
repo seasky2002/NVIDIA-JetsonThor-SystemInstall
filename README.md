@@ -128,6 +128,8 @@ Nvidia AGX Thor安裝log
 
 參考來源:
 NVIDIA Jetpack:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo)
+
 CSDN Jetson Thor刷機與安裝教學:[連結](https://blog.csdn.net/nenchoumi3119/article/details/151148194)
+
 知乎-設定CUDA的環境變量:[連結](https://zhuanlan.zhihu.com/p/1971245103956878390)
      
