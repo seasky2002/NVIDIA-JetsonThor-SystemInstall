@@ -194,7 +194,7 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
 
   如果有，此時就能在ROS上運行了。
   ```bash
-     ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
+    ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
   ```
   打開Rviz查看話題是否有正確發布:
   ```bash
