@@ -211,13 +211,17 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
 
 ## 參考來源:
 
-NVIDIA Jetpack:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo)
+NVIDIA Jetpack官方:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo)
 
-CSDN Jetson Thor刷機與安裝教學:[連結](https://blog.csdn.net/nenchoumi3119/article/details/151148194)
+CSDN-Jetson Thor刷機與安裝教學:[連結](https://blog.csdn.net/nenchoumi3119/article/details/151148194)
 
 知乎-設定CUDA的環境變量:[連結](https://zhuanlan.zhihu.com/p/1971245103956878390)
 
 魚香ROS-一鍵安裝ROS2:[連結](https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97)
 
-ROS realsense SDK安裝: [連結](https://blog.csdn.net/gitblog_00540/article/details/151542427)
+CSDN-ROS2 RealSense SDK安裝: [連結](https://blog.csdn.net/gitblog_00540/article/details/151542427)
+
+Velodyne官方ROS: [連結](https://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20HDL-32E) 
+
+CSDN-ROS2 VLP-16安裝: [連結](https://blog.csdn.net/hltt3838/article/details/109147598)
      
