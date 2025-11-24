@@ -1,4 +1,4 @@
-# NVIDIA-Thor-System-Install
+![108994](https://github.com/user-attachments/assets/cb096804-59d6-4e0c-b205-6ffb680312e1)# NVIDIA-Thor-System-Install
 Nvidia AGX Thor安裝log
 
 **硬體規格:
@@ -168,8 +168,42 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
   
   <img width="2016" height="812" alt="image" src="https://github.com/user-attachments/assets/d63dc10a-433d-4bae-a8f1-d1dbcdebd4be" />
 
+
+## VII. VLP-16(Velodyne Lidar Driver)安裝:
+  在終端機先運行以下指令，安裝velodyne的依賴:
+  ```bash
+     sudo apt-get install ros-jazzy-velodyne #這裡用jazzy是因為我的ROS2是載這個版本，目前官方支援jazzy和rolling
+  ```
+  然後，在[官方Github](https://github.com/ros-drivers/velodyne/tree/ros2)下載對應版本的分支，然後將內容都放到ROS工作空間的src
+  接下來進行編譯:
+  ```bash
+     colcon build
+  ```
+  確認Velodyne的網路線和Jetson接在一起之後，前往Setting-->Network-->找到連接的以太網路
   
-## VII. 已知問題:
+  ![108993](https://github.com/user-attachments/assets/50f1f294-8a5c-4983-a5f8-2dd04b0a1720)
+
+  點選右邊的齒輪，進入IPv4設定位置。
+  VLP-16 需要的ip是 192.168.1.X的格式，因此將其改成以下的樣子:
+
+  ![108994](https://github.com/user-attachments/assets/73f8e079-82dd-4f13-b0c2-dbd6981b6687)
+
+  修改好後，在瀏覽器輸入192.168.1.201，檢查有沒有進去Velodyne的參數設定頁面
+  
+  ![108995](https://github.com/user-attachments/assets/58c959e4-a80e-4665-a069-e3ae0830074b)
+
+  如果有，此時就能在ROS上運行了。
+  ```bash
+     ros2 launch velodyne velodyne-all-nodes-VLP16-launch.py
+  ```
+  打開Rviz查看話題是否有正確發布:
+  ```bash
+    rviz2 rviz
+  ```
+  
+  <img width="2142" height="1160" alt="image" src="https://github.com/user-attachments/assets/9376f13e-9d95-45b1-9fe5-acb673597cbf" />
+
+## VIII. 已知問題:
   1. 在nvidia-smi會顯示Memory Usage: Not Supported，這只是因為它讀不到記憶體狀態，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
   2. jetson_release會顯示抓不到jetpack，但實際已經在裡面了
 
