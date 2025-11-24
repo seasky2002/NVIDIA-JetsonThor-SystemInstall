@@ -206,7 +206,9 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
 ## VIII. 已知問題:
   1. 在nvidia-smi會顯示Memory Usage: Not Supported，這只是因為它讀不到記憶體狀態，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
   2. jetson_release會顯示抓不到jetpack，但實際已經在裡面了
+  3. RealSense SDK沒辦法讀取到d435i的相機，目前推測是Jetpack 6以上的版本把IMU的依賴給移除了[連結](https://github.com/realsenseai/librealsense/issues/14169)
 
+  ![messageImage_1763970783422](https://github.com/user-attachments/assets/6d7cbced-51c0-49a0-8586-e2c238337556)
 
 
 ## 參考來源:
