@@ -126,8 +126,21 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
      nvidia-smi
      ```
      <img width="1097" height="530" alt="image" src="https://github.com/user-attachments/assets/6404bbd8-3ad9-44c6-9a93-55e0c784f579" />
+## VI. ROS2 安裝:
+  使用小魚的一鍵安裝ROS功能:
+   ```bash
+     wget http://fishros.com/install -O fishros && . fishros
+   ```
+  而後照著上面進行操作，目前Ubuntu24.04支援以下三種版本:
+    1. Jazzy
+    2. Kilted
+    3. Rolling
+  安裝完成後，可以開新的終端驗證:
+  
+  <img width="461" height="79" alt="image" src="https://github.com/user-attachments/assets/ad295a88-dac1-4324-912f-e5e5241057e0" />
 
-## VI. 已知問題:
+
+## VII. 已知問題:
   1. 在nvidia-smi會顯示Memory Usage: Not Supported，這只是因為它讀不到記憶體狀態，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
   2. jetson_release會顯示抓不到jetpack，但實際已經在裡面了
 
@@ -137,4 +150,6 @@ NVIDIA Jetpack:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guid
 CSDN Jetson Thor刷機與安裝教學:[連結](https://blog.csdn.net/nenchoumi3119/article/details/151148194)
 
 知乎-設定CUDA的環境變量:[連結](https://zhuanlan.zhihu.com/p/1971245103956878390)
+
+魚香ROS-一鍵安裝ROS2:[連結](https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97)
      
