@@ -128,8 +128,8 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
      <img width="1097" height="530" alt="image" src="https://github.com/user-attachments/assets/6404bbd8-3ad9-44c6-9a93-55e0c784f579" />
 
 ## VI. 已知問題:
-  1. 在nvidia-smi會顯示Memory Usage: Not Supported，這是它讀不到的問題，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
-  2. jetson_release會顯示抓不到jetpack，但實際是有的
+  1. 在nvidia-smi會顯示Memory Usage: Not Supported，這只是因為它讀不到記憶體狀態，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
+  2. jetson_release會顯示抓不到jetpack，但實際已經在裡面了
 
 參考來源:
 NVIDIA Jetpack:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo)
