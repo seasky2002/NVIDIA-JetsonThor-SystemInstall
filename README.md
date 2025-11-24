@@ -139,12 +139,44 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
   
   <img width="461" height="79" alt="image" src="https://github.com/user-attachments/assets/ad295a88-dac1-4324-912f-e5e5241057e0" />
 
+## VII. Realsense SDK安裝
+  在安裝好ROS2後，執行下面的指令，將librealsense下載下來:
+  ```bash
+     git clone https://gitcode.com/GitHub_Trending/li/librealsense
+     cd librealsense
+   ```
+  而後對內容進行建置:
+  ```bash
+     mkdir build && cd build
+     cmake .. -DBUILD_WITH_ROS2=ON \
+             -DCMAKE_INSTALL_PREFIX=/opt/ros/jazzy
+     make -j4
+     sudo make install
+   ```
+  建置完成後，即可用以下指令驗證:
+  ```bash
+     realsense-viewer
+   ```
 
+  <img width="2151" height="1165" alt="螢幕擷取畫面 2025-11-24 103644" src="https://github.com/user-attachments/assets/8872114f-7133-4c41-b83f-8354beca3982" />
+
+  ROS依賴則是用以下的指令下載:
+  ```bash
+     sudo apt install ros-jazzy-realsense2-*
+   ```
+  然後，安裝[realsense-ros包](https://github.com/realsenseai/realsense-ros?tab=readme-ov-file#installation-on-ubuntu)後，建置即可運行
+  
+  <img width="2016" height="812" alt="image" src="https://github.com/user-attachments/assets/d63dc10a-433d-4bae-a8f1-d1dbcdebd4be" />
+
+  
 ## VII. 已知問題:
   1. 在nvidia-smi會顯示Memory Usage: Not Supported，這只是因為它讀不到記憶體狀態，實際在運行時，GPU還是會分配記憶體(經過pytorch測試)
   2. jetson_release會顯示抓不到jetpack，但實際已經在裡面了
 
-參考來源:
+
+
+**參考來源**:
+
 NVIDIA Jetpack:[連結](https://docs.nvidia.com/jetson/agx-thor-devkit/user-guide/latest/setup_cuda.html#option-2-jetpack-apt-repo)
 
 CSDN Jetson Thor刷機與安裝教學:[連結](https://blog.csdn.net/nenchoumi3119/article/details/151148194)
