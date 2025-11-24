@@ -180,8 +180,8 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
      colcon build
   ```
   確認Velodyne的網路線和Jetson接在一起之後，前往Setting-->Network-->找到連接的以太網路
-  
-  ![108993](https://github.com/user-attachments/assets/50f1f294-8a5c-4983-a5f8-2dd04b0a1720)
+
+  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/50f1f294-8a5c-4983-a5f8-2dd04b0a1720" />
 
   點選右邊的齒輪，進入IPv4設定位置。
   VLP-16 需要的ip是 192.168.1.X的格式，因此將其改成以下的樣子:
