@@ -11,9 +11,10 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
 ---
 
 ## 📚 目錄
-* [I. 硬體與軟體準備](#I.硬體準備)
-* [II. 系統安裝流程 (刷機)](#ii-系統安裝流程-刷機)
-* [III. Jetpack & CUDA 安裝](#iii-jetpack--cuda-安裝)
+* [I. 硬體準備](#i-硬體準備)
+* [II. 軟體準備](#ii-軟體準備)
+* [II. 系統安裝流程](#iii-安裝流程)
+* [IV. Jetpack & CUDA 安裝](#iii-jetpack--cuda-安裝)
 * [IV. jetson-stats 監控套件安裝](#iv-jetson-stats-監控套件安裝)
 * [V. ROS2 安裝](#v-ros2-安裝)
 * [VI. Realsense SDK 安裝](#vi-realsense-sdk-安裝)
