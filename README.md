@@ -19,8 +19,8 @@ JetPack 7.0 with Jetson Linux 38.2(Ubuntu 24.04 LTS　＆　Kernel v6.8 LTS)**
 * [VI. ROS2 安裝](#vi-ros2安裝)
 * [VII. Realsense SDK 安裝](#vii-realsense-sdk安裝)
 * [VIII. VLP-16 (Velodyne Lidar Driver) 安裝](#viii-vlp-16velodyne-lidar-driver安裝)
-* [IX. 已知問題與解決方案](#ix-已知問題與解決方案)
-* [參考資料](#參考資料)
+* [IX. 已知問題](#ix-已知問題)
+* [參考來源](#參考來源)
 
 ---
 
